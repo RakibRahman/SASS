@@ -1,0 +1,28 @@
+$size: 10px;
+$color: black;
+$f-size: 1.5rem;
+@mixin flex {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  background: blueviolet;
+  margin: 20px auto;
+}
+%container-p {
+  width: 40%;
+  color: White;
+}
+.container {
+  @include flex;
+  p {
+    @extend %container-p;
+    font-size: $f-size;
+    .title {
+      display: inline-block;
+      color: aqua;
+      font-size: $f-size + 0.5;
+      margin-bottom: $size + 30;
+      border-bottom: $size/2 solid $color;
+    }
+  }
+}
