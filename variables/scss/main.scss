@@ -1,0 +1,13 @@
+// Variables
+
+$headingColor: #f14e0d;
+$font-size: 2.5ch;
+.one {
+  h1 {
+    text-align: center;
+    color: $headingColor;
+  }
+  p {
+    font-size: $font-size;
+  }
+}
