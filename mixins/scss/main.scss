@@ -1,0 +1,67 @@
+$headingColor: #f14e0d;
+$pcolor: blue;
+$font-size: 2.5ch;
+
+%test-h1 {
+  text-align: center;
+  font-weight: 800;
+  color: green;
+}
+%test-p {
+  color: $pcolor;
+  font-weight: 600;
+  font-size: $font-size;
+}
+@mixin test-p($color) {
+  color: $color;
+  font-weight: 600;
+  font-size: $font-size;
+}
+@mixin test-h1($color) {
+  text-align: center;
+  font-weight: 800;
+  color: $color;
+}
+body {
+  background: black;
+}
+.one {
+  h1 {
+    @extend %test-h1;
+    color: palevioletred;
+  }
+  p {
+    // @extend %test-p;
+    @include test-p(red);
+    color: goldenrod;
+  }
+}
+.two {
+  h1 {
+    // @extend %test-h1;
+    @include test-h1(blue);
+  }
+  p {
+    @extend %test-p;
+
+    color: violet;
+  }
+}
+
+@mixin flex {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  background: blueviolet;
+  margin: 0 auto;
+}
+%container-p {
+  width: 40%;
+  color: White;
+}
+.container {
+  @include flex;
+  p {
+    @extend %container-p;
+  }
+}
