@@ -1,0 +1,36 @@
+.div-one h1 {
+  color: chocolate;
+}
+
+.div-one p {
+  color: greenyellow;
+}
+
+.div-two h1 {
+  color: brown;
+}
+
+.div-two p {
+  color: orangered;
+}
+
+.div-one h1 {
+  text-align: center;
+  font-size: 15ch;
+}
+
+.div-one p {
+  font-style: italic;
+  font-size: 5ch;
+}
+
+.div-two h1 {
+  text-align: center;
+  font-size: 15ch;
+}
+
+.div-two p {
+  font-style: italic;
+  font-size: 5ch;
+}
+/*# sourceMappingURL=main.css.map */
