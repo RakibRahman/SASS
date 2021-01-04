@@ -35,7 +35,7 @@ body {
   color: violet;
 }
 
-.container p {
+.container p, .wrapper {
   width: 40%;
   color: White;
 }
@@ -50,5 +50,9 @@ body {
           justify-content: space-between;
   background: blueviolet;
   margin: 0 auto;
+}
+
+.wrapper {
+  background: whitesmoke;
 }
 /*# sourceMappingURL=main.css.map */
