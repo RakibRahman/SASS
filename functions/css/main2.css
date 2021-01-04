@@ -1,0 +1,31 @@
+.container {
+  width: 100vw;
+  height: 40vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.container1 {
+  font-size: 2rem;
+  background: #a80163;
+}
+
+.container2 {
+  width: 50vw;
+  background: #85d1b0;
+  font-size: 3rem;
+}
+
+.container3 {
+  background: #104fda;
+  font-size: 4rem;
+  width: 20vw;
+}
+
+.container4 {
+  background: #3efced;
+  font-size: 5rem;
+  width: 70vw;
+}
+/*# sourceMappingURL=main2.css.map */

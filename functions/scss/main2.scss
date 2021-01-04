@@ -1,0 +1,51 @@
+$width: 100vw;
+.container {
+  width: $width;
+  height: 40vh;
+  display: grid;
+  place-items: center;
+}
+$bg-colors: (
+  "bg-clr1": #a80163,
+  "bg-clr2": #85d1b0,
+  "bg-clr3": #104fda,
+  "bg-clr4": #3efced,
+);
+$font-size: (
+  "fs1": 2rem,
+  "fs2": 3rem,
+  "fs3": 4rem,
+  "fs4": 5rem,
+);
+@function half($width) {
+  @return $width / 2;
+}
+@function bg-color($bg-color) {
+  @return map-get($bg-colors, $bg-color);
+}
+@function font-size($f-size) {
+  @return map-get($font-size, $f-size);
+}
+.container1 {
+  font-size: font-size(fs1);
+
+  background: bg-color(bg-clr1);
+}
+.container2 {
+  width: half($width);
+  background: bg-color(bg-clr2);
+
+  font-size: font-size(fs2);
+}
+.container3 {
+  background: bg-color(bg-clr3);
+  font-size: font-size(fs3);
+
+  width: half($width) / 2.5;
+}
+.container4 {
+  background: bg-color(bg-clr4);
+  font-size: font-size(fs4);
+
+  width: half($width) + 20vw;
+}
