@@ -1,0 +1,40 @@
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
+$colors: (
+  "clr1": limegreen,
+  "clr2": hotpink,
+  "clr3": goldenrod,
+);
+.wrapper {
+  margin: 0 auto;
+  width: 50%;
+  .title {
+    text-align: center;
+    font-weight: map-get($font-weights, medium);
+    color: map-get($colors, clr3);
+  }
+  .para {
+    text-align: justify;
+    text-align-last: left;
+    font-weight: map-get($font-weights, bold);
+    color: map-get($colors, clr2);
+
+    & .emo {
+      font-size: 25px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        cursor: pointer;
+        font-size: 20px;
+      }
+    }
+  }
+  .note {
+    text-align: right;
+    font-weight: map-get($font-weights, regular);
+    color: map-get($colors, clr1);
+  }
+}

@@ -1,0 +1,35 @@
+.wrapper {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.wrapper .title {
+  text-align: center;
+  font-weight: 500;
+  color: goldenrod;
+}
+
+.wrapper .para {
+  text-align: justify;
+  text-align-last: left;
+  font-weight: 700;
+  color: hotpink;
+}
+
+.wrapper .para .emo {
+  font-size: 25px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.wrapper .para .emo:hover {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.wrapper .note {
+  text-align: right;
+  font-weight: 400;
+  color: limegreen;
+}
+/*# sourceMappingURL=main.css.map */
