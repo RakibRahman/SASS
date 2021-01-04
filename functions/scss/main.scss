@@ -1,0 +1,37 @@
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+  "light": 200,
+);
+$colors: (
+  "clr1": limegreen,
+  "clr2": hotpink,
+  "clr3": yellowgreen,
+);
+@function colors($color-name) {
+  @return map-get($colors, $color-name);
+}
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+.wrapper {
+  margin: 0 auto;
+  width: 50%;
+  h1 {
+    text-align: center;
+    font-weight: map-get($font-weights, medium);
+    color: colors(clr3);
+  }
+  p {
+    text-align: justify;
+    text-align-last: left;
+    font-weight: weight(light);
+    color: map-get($colors, clr2);
+  }
+  h3 {
+    text-align: right;
+    font-weight: map-get($font-weights, regular);
+    color: map-get($colors, clr1);
+  }
+}
