@@ -1,0 +1,32 @@
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+@mixin btn-shape($size,$pill:false) {
+    width: $size;
+    height: $size/4;
+    border: 0;
+
+    @if $pill==true {
+    border-radius: 9999px;
+    background-color: yellowgreen;
+} @else{
+    background: yellow;
+}
+}
+
+.buttons{
+    button{
+        padding: 5px 10px;
+    }
+
+.sqr{
+           @include btn-shape(150px,$pill:false);
+
+}
+.pill{
+           @include btn-shape(150px,$pill:true);
+
+}
+}

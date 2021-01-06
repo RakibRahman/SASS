@@ -1,0 +1,26 @@
+body {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.buttons button {
+  padding: 5px 10px;
+}
+
+.buttons .sqr {
+  width: 150px;
+  height: 37.5px;
+  border: 0;
+  background: yellow;
+}
+
+.buttons .pill {
+  width: 150px;
+  height: 37.5px;
+  border: 0;
+  border-radius: 9999px;
+  background-color: yellowgreen;
+}
+/*# sourceMappingURL=main.css.map */
