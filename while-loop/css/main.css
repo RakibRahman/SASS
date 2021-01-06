@@ -1,0 +1,95 @@
+.box0 {
+  width: 0px;
+  height: 100px;
+  margin-top: 10px;
+  background: cyan;
+}
+
+.box1 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: cyan;
+}
+
+.box2 {
+  width: 200px;
+  height: 100px;
+  margin-top: 10px;
+  background: cyan;
+}
+
+.box3 {
+  width: 300px;
+  height: 100px;
+  margin-top: 10px;
+  background: cyan;
+}
+
+.box4 {
+  width: 400px;
+  height: 100px;
+  margin-top: 10px;
+  background: cyan;
+}
+
+.box0 {
+  width: 50px;
+}
+
+.box5 {
+  width: 100px;
+  height: 100px;
+  background: darkcyan;
+  margin-top: 10px;
+}
+
+.box6 {
+  width: 200px;
+  height: 100px;
+  background: darkcyan;
+  margin-top: 10px;
+}
+
+.box7 {
+  width: 300px;
+  height: 100px;
+  background: darkcyan;
+  margin-top: 10px;
+}
+
+.box8 {
+  width: 400px;
+  height: 100px;
+  background: darkcyan;
+  margin-top: 10px;
+}
+
+.box9 {
+  width: 500px;
+  height: 100px;
+  background: darkcyan;
+  margin-top: 10px;
+}
+
+.wrapper {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .turn {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  margin-right: 20px;
+}
+
+.wrapper h1 {
+  font-size: 6rem;
+  margin-top: auto;
+}
+/*# sourceMappingURL=main.css.map */
