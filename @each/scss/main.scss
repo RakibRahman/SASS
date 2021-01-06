@@ -1,0 +1,14 @@
+$sizes: 2rem, 3rem, 4rem;
+
+@each $size in $sizes {
+  .f-size-#{$size} {
+    font-size: $size;
+    line-height: $size;
+  }
+}
+$base-color: #036;
+@for $i from 1 through 3 {
+  p:nth-child(n + #{$i}) {
+    color: lighten($base-color, $i * 5%);
+  }
+}

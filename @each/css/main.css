@@ -1,0 +1,27 @@
+.f-size-2rem {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.f-size-3rem {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+.f-size-4rem {
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
+p:nth-child(n + 1) {
+  color: #004080;
+}
+
+p:nth-child(n + 2) {
+  color: #004d99;
+}
+
+p:nth-child(n + 3) {
+  color: #0059b3;
+}
+/*# sourceMappingURL=main.css.map */
