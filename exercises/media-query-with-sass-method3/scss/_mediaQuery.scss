@@ -1,0 +1,16 @@
+@import "nav";
+@import "articles";
+
+@media screen and (min-width: 480px) {
+  @include articles--mobile();
+}
+
+@media screen and (min-width: 768px) {
+  @include nav--tab();
+  @include articles--tab();
+}
+
+@media screen and (min-width: 1400px) {
+  @include nav--desktop();
+  @include articles--desktop();
+}

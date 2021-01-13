@@ -1,0 +1,46 @@
+section.articles {
+  display: grid;
+  grid-gap: 2em;
+  margin-top: 1em;
+
+  article {
+    background: sandybrown;
+    @include customShadow(8px);
+  }
+  .info {
+    padding: 10px;
+    & > * {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+//Media Query
+@mixin articles--mobile() {
+  section.articles {
+    padding: 0 20px;
+    margin-bottom: 20px;
+
+    article img {
+      width: 100%;
+      height: 300px;
+    }
+    .info {
+      text-align: center;
+    }
+  }
+}
+@mixin articles--tab() {
+  section.articles {
+    padding: 0 20px;
+    margin-bottom: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@mixin articles--desktop() {
+  section.articles {
+    padding: 0 20px;
+    margin-bottom: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
