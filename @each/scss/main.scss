@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 $sizes: 2rem, 3rem, 4rem;
 
 @each $size in $sizes {
@@ -10,5 +16,53 @@ $base-color: #036;
 @for $i from 1 through 3 {
   p:nth-child(n + #{$i}) {
     color: lighten($base-color, $i * 5%);
+  }
+}
+// Nav
+
+nav {
+  width: 100vw;
+  height: 5vh;
+  padding: 5px;
+  display: grid;
+  place-items: center;
+  background: black;
+  ul {
+    list-style-type: none;
+    display: flex;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+      a {
+        display: block;
+        font-weight: 800;
+        color: paleturquoise;
+        transition: 0.3s;
+        &:hover {
+          text-decoration: none;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+$i: 1;
+$colors: (
+  "1": green,
+  "2": springgreen,
+  "3": yellowgreen,
+  "4": seagreen,
+);
+@each $name, $value in $colors {
+  .clr-#{$name} {
+    color: $value;
+  }
+}
+.para {
+  margin-top: 50px;
+  & > * {
+    margin-bottom: 20px;
   }
 }
