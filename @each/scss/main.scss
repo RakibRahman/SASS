@@ -66,3 +66,22 @@ $colors: (
     margin-bottom: 20px;
   }
 }
+
+//Headings
+.wrapper {
+  border: 1px solid red;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+$font-sizes: (
+  h1: 25px,
+  h2: 30px,
+  h3: 35px,
+  h4: 15px,
+);
+@each $tag, $value in $font-sizes {
+  #{$tag} {
+    font-size: $value;
+  }
+}
