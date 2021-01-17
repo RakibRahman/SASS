@@ -1,0 +1,42 @@
+//Imports
+@import "reset";
+
+//Variables
+$deepclr: #974956;
+$lightclr: #f5f5f5;
+$clr1: #f14e0d;
+$h1-size: 24px;
+
+//Mixins
+@mixin clrfix {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#main-nav {
+  background: $deepclr;
+
+  ul {
+    width: 100%;
+  }
+  li {
+    float: left;
+    width: 14%;
+    // border: 1px solid white;
+  }
+  a {
+    color: $lightclr;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 16px;
+  }
+}
+#main-nav ul::after {
+  @include clrfix;
+}
+section h1 {
+  font-size: $h1-size;
+  color: $clr1;
+}
