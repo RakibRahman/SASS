@@ -1,41 +1,8 @@
 //Imports
 @import "reset";
-
-//Variables
-$deepclr: #974956;
-$lightclr: #f5f5f5;
-$clr1: #f14e0d;
-$h1-size: 24px;
-$banner-size: 46px;
-//Mixins
-@mixin clrfix {
-  content: "";
-  display: block;
-  clear: both;
-}
-@mixin banner {
-  width: 100%;
-  position: relative;
-  .banner-content {
-    position: absolute;
-    top: 50px;
-    width: 100%;
-  }
-  img {
-    width: 100%;
-  }
-  span {
-    font-size: $banner-size;
-    display: block;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  span.title {
-    color: $deepclr;
-    margin-bottom: 30px;
-  }
-}
-
+@import "variables";
+@import "mixins";
+@import "mQ";
 #main-nav {
   background: $deepclr;
 
@@ -44,9 +11,16 @@ $banner-size: 46px;
   }
   li {
     float: left;
-    width: 14%;
+    width: (100% / 6);
+    @include mq(320px) {
+      width: 100%;
+    }
+    @include mq(768px) {
+      width: (100% / 6);
+    }
     // border: 1px solid white;
   }
+
   a {
     color: $lightclr;
     text-decoration: none;
@@ -61,16 +35,26 @@ $banner-size: 46px;
 section h1 {
   font-size: $h1-size;
   color: $clr1;
+  text-align: center;
+  margin: 20px 0;
 }
 .lead-banner {
-  border: 2px solid red;
+  margin-top: 10px;
   @include banner;
   text-align: right;
 }
 .lessons-banner {
   @include banner;
+  .title {
+    @include mq(320px) {
+      font-size: $mobileFont + 0.5;
+    }
+  }
   .sub-title {
     color: whitesmoke;
+    @include mq(320px) {
+      font-size: $mobileFont;
+    }
   }
   li {
     color: seagreen;
@@ -78,5 +62,59 @@ section h1 {
     text-transform: uppercase;
     margin: 60px 0;
     max-width: 500px;
+    @include mq(320px) {
+      font-size: $mobileFont;
+      margin: 5px 0;
+    }
+    @include mq(768px) {
+      font-size: $tabletFont;
+      margin: 25px 0;
+      color: cornflowerblue;
+    }
+  }
+}
+#services {
+  display: grid;
+  place-content: center;
+  background: gold;
+  padding: 20px 0;
+  margin: 30px 0;
+  ul {
+    // margin: 0 150px;
+  }
+  li {
+    float: left;
+    text-align: center;
+    width: 100% / 3;
+  }
+  img {
+    width: 60%;
+    margin-bottom: 20px 20%;
+  }
+  a {
+    display: block;
+    color: sienna;
+    @include mq2(600px, 768px) {
+      text-decoration: none;
+    }
+  }
+  ul:after {
+    @include clrfix;
+  }
+}
+
+#projects {
+  ul {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 1rem;
+    @include mq(320px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mq(320px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }

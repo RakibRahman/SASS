@@ -1,0 +1,13 @@
+@mixin mq($device-width) {
+  @media only screen and (min-width: $device-width) {
+    @content;
+  }
+}
+
+@mixin mq2($width...) {
+  @if length($width) == 2 {
+    @media screen and (min-width: nth($width,1)) and (max-width: nth($width,2 )) {
+      @content;
+    }
+  }
+}

@@ -1,6 +1,18 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: arial;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background: #f8f9fb;
+}
+
+html {
+  font-size: 100%;
 }
 
 html,
@@ -39,7 +51,6 @@ li {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box;
 }
 
 #main-nav {
@@ -52,7 +63,19 @@ li {
 
 #main-nav li {
   float: left;
-  width: 14%;
+  width: 16.66667%;
+}
+
+@media only screen and (min-width: 320px) {
+  #main-nav li {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #main-nav li {
+    width: 16.66667%;
+  }
 }
 
 #main-nav a {
@@ -72,10 +95,12 @@ li {
 section h1 {
   font-size: 24px;
   color: #f14e0d;
+  text-align: center;
+  margin: 20px 0;
 }
 
 .lead-banner {
-  border: 2px solid red;
+  margin-top: 10px;
   width: 100%;
   position: relative;
   text-align: right;
@@ -130,8 +155,20 @@ section h1 {
   margin-bottom: 30px;
 }
 
+@media only screen and (min-width: 320px) {
+  .lessons-banner .title {
+    font-size: 1.2rem;
+  }
+}
+
 .lessons-banner .sub-title {
   color: whitesmoke;
+}
+
+@media only screen and (min-width: 320px) {
+  .lessons-banner .sub-title {
+    font-size: 0.7rem;
+  }
 }
 
 .lessons-banner li {
@@ -140,5 +177,76 @@ section h1 {
   text-transform: uppercase;
   margin: 60px 0;
   max-width: 500px;
+}
+
+@media only screen and (min-width: 320px) {
+  .lessons-banner li {
+    font-size: 0.7rem;
+    margin: 5px 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .lessons-banner li {
+    font-size: 1.25rem;
+    margin: 25px 0;
+    color: cornflowerblue;
+  }
+}
+
+#services {
+  display: grid;
+  place-content: center;
+  background: gold;
+  padding: 20px 0;
+  margin: 30px 0;
+}
+
+#services li {
+  float: left;
+  text-align: center;
+  width: 100% / 3;
+}
+
+#services img {
+  width: 60%;
+  margin-bottom: 20px 20%;
+}
+
+#services a {
+  display: block;
+  color: sienna;
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  #services a {
+    text-decoration: none;
+  }
+}
+
+#services ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#projects ul {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-row-gap: 1rem;
+}
+
+@media only screen and (min-width: 320px) {
+  #projects ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  #projects ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 /*# sourceMappingURL=styles.css.map */

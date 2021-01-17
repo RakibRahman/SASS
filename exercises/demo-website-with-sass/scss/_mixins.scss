@@ -1,0 +1,28 @@
+//Mixins
+@mixin clrfix {
+  content: "";
+  display: block;
+  clear: both;
+}
+@mixin banner {
+  width: 100%;
+  position: relative;
+  .banner-content {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+  }
+  img {
+    width: 100%;
+  }
+  span {
+    font-size: $banner-size;
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  span.title {
+    color: $deepclr;
+    margin-bottom: 30px;
+  }
+}
