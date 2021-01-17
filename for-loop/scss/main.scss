@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 $width: 100px;
 
 @for $i from 1 through 4 {
@@ -16,4 +19,29 @@ $width: 100px;
 }
 .box4 {
   background: powderblue;
+}
+//container
+
+.container {
+  width: calc(100% - 10rem);
+  max-width: 50rem;
+  background: lightblue;
+  margin: 0 auto;
+}
+div[class^="col-"] {
+  color: cornflowerblue;
+  padding: 1rem 0;
+  text-align: center;
+  border: 1px solid white;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  $columns: 12;
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      flex: 0 0 100% / $columns * $i;
+    }
+  }
 }
