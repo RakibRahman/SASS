@@ -201,15 +201,21 @@ body {
 .nav__menu-list {
   list-style: none;
   line-height: 7rem;
+  text-align: center;
 }
 
 .nav__menu-link {
   text-decoration: none;
   font-size: 3rem;
   color: #f8f9fa;
+  min-width: 25rem;
 }
 
 .nav__menu-link:hover {
   color: black;
+  background: #f8f9fa;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #fd7e14;
 }
 /*# sourceMappingURL=style.css.map */
