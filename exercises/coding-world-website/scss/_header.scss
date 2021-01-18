@@ -1,0 +1,18 @@
+.header {
+  height: 70vh;
+  background-image: linear-gradient(to right bottom, $tint2, $tint),
+    url(https://picsum.photos/800);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid rgba($white, 0.8);
+
+  &__image {
+    border-radius: 20px;
+  }
+  &__label {
+  }
+  &__title {
+  }
+  &__button-enter {
+  }
+}
