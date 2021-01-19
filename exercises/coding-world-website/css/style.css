@@ -387,4 +387,20 @@ body {
   object-fit: cover;
   transition: all 0.3s;
 }
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__link {
+  color: #f8f9fa;
+  background: #343a40;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.footer__link:not(:last-child) {
+  margin-right: 10px;
+}
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  justify-content: center;
+
+  &__link {
+    color: $light;
+    background: $dark;
+
+    font-size: 2rem;
+    text-decoration: none;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
