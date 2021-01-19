@@ -218,4 +218,68 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 5px #fd7e14;
 }
+
+.card {
+  display: flex;
+  justify-content: space-around;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 5rem 0;
+}
+
+.card__item {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40rem;
+  height: 25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.card__item:hover {
+  transform: translateY(0.5rem) scale(1.03);
+  color: #fff;
+}
+
+.card__item--1 {
+  background-color: #007bff;
+}
+
+.card__item--2 {
+  background-color: #28a745;
+}
+
+.card__item--3 {
+  background-color: #17a2b8;
+}
+
+.card__item--4 {
+  background: #ffc107;
+}
+
+.card__header {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.card__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  margin-top: 3rem;
+}
+
+.card__icon {
+  font-size: 10rem;
+  margin-right: 3rem;
+}
 /*# sourceMappingURL=style.css.map */
