@@ -1,15 +1,40 @@
 .footer {
   display: flex;
   justify-content: center;
+  border-top: 1px solid $color-white-transparent;
+  padding: 2rem 0;
+
+  :not(:last-child) {
+    margin-right: 2rem;
+  }
 
   &__link {
     color: $light;
     background: $dark;
-
     font-size: 2rem;
     text-decoration: none;
-    &:not(:last-child) {
-      margin-right: 10px;
+    position: relative;
+    transition: transform 0.4s;
+
+    &:hover {
+      transform: translateY(-0.3rem);
+      color: aqua;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      display: flex; //important
+      width: 0;
+      height: 0.3rem;
+      background-color: darkcyan;
+      transition: all 0.4s;
+    }
+
+    &:hover::after {
+      width: 100%;
+      left: 0;
     }
   }
 }

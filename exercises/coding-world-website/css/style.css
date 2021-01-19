@@ -391,6 +391,12 @@ body {
 .footer {
   display: flex;
   justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 2rem 0;
+}
+
+.footer :not(:last-child) {
+  margin-right: 2rem;
 }
 
 .footer__link {
@@ -398,9 +404,28 @@ body {
   background: #343a40;
   font-size: 2rem;
   text-decoration: none;
+  position: relative;
+  transition: transform 0.4s;
 }
 
-.footer__link:not(:last-child) {
-  margin-right: 10px;
+.footer__link:hover {
+  transform: translateY(-0.3rem);
+  color: aqua;
+}
+
+.footer__link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  display: flex;
+  width: 0;
+  height: 0.3rem;
+  background-color: darkcyan;
+  transition: all 0.4s;
+}
+
+.footer__link:hover::after {
+  width: 100%;
+  left: 0;
 }
 /*# sourceMappingURL=style.css.map */
