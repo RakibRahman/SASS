@@ -96,10 +96,9 @@ body {
 }
 
 .nav {
-  position: fixed;
+  position: absolute;
   right: 6rem;
-  top: 6rem;
-  width: auto;
+  top: 5rem;
   width: auto;
   height: 3rem;
   display: flex;
