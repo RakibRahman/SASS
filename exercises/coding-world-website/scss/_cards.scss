@@ -8,10 +8,14 @@
   color: $color-white-transparent;
   margin: 5rem 0;
 
+  @include responsive(tablet) {
+    flex-wrap: wrap;
+  }
+
   &__item {
     padding: 2rem;
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-items: center;
     width: 40rem;
     height: 25rem;
@@ -23,21 +27,42 @@
       transform: translateY(0.5rem) scale(1.03);
       color: $color-white;
     }
+    @include responsive(tablet) {
+      margin: 2rem;
+    }
+    @include responsive(mobile) {
+      flex-basis: 75% !important;
+    }
 
     &--1 {
       background-color: $blue;
+      @include responsive(tablet) {
+        flex-basis: 45%;
+      }
     }
 
     &--2 {
       background-color: $success;
+      background-color: $blue;
+      @include responsive(tablet) {
+        flex-basis: 45%;
+      }
     }
 
     &--3 {
       background-color: $info;
+      background-color: $blue;
+      @include responsive(tablet) {
+        flex-basis: 45%;
+      }
     }
 
     &--4 {
       background: $warning;
+      background-color: $blue;
+      @include responsive(tablet) {
+        flex-basis: 45%;
+      }
     }
   }
 

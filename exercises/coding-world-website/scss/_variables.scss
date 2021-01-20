@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
 *,
 *::after,
 *::before {
@@ -5,10 +7,7 @@
   padding: 0;
   box-sizing: inherit;
 }
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
-}
+
 $color-primary: #0e1111;
 $color-primary-light: #232b2b;
 $color-secondary: #353839;
@@ -46,6 +45,24 @@ $tint: rgba($light, 0.3);
 $tint2: rgba($light, 0.3);
 //Font
 $font-primary: "Lato", sans-serif;
+
+html {
+  font-size: 62.5%; //10px = 1rem
+  box-sizing: border-box;
+
+  @include responsive(mobile) {
+    font-size: 43.75%; // 7px = 1rem
+  }
+  @include responsive(tablet) {
+    font-size: 56.25%; //9px = 1rem
+  }
+  @include responsive(pc) {
+    font-size: 50%; //8px = 1rem
+  }
+  @include responsive(four-k) {
+    font-size: 75%; //12px = 1rem
+  }
+}
 
 body {
   font-family: $font-primary;

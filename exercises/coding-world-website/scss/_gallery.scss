@@ -13,6 +13,10 @@
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-gap: 0.6rem;
+
+    @include responsive(tablet) {
+      width: 100%;
+    }
   }
   &__item {
     cursor: pointer;
@@ -34,6 +38,10 @@
       text-align: center;
       transition: opacity 0.3s;
       transform: translateY(3rem);
+
+      @include responsive(mobile) {
+        display: none;
+      }
     }
     &:hover::after {
       opacity: 1;

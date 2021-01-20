@@ -6,7 +6,11 @@
     url(https://picsum.photos/800);
   background-repeat: no-repeat;
   background-size: cover;
-  border: 1px solid rgba($white, 0.8);
+  border-bottom: 3px solid rgba($white, 0.8);
+
+  @include responsive(tablet) {
+    height: 70rem;
+  }
 
   &__image {
     border-radius: 20px;
@@ -18,11 +22,19 @@
   &__label {
     display: grid;
     place-items: center;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
   }
   &__title {
+    color: rgba($white, 0.8);
     display: block;
     font-size: 8rem;
     margin-bottom: 10rem;
+
+    @include responsive(mobile) {
+      font-size: 5rem;
+    }
   }
   &__button-enter {
     font-family: $font-primary;
